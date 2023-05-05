@@ -12,11 +12,11 @@ U = SquareAp(N, M, 0.3); % setting len = 0.3 makes the square take up 30%
 
 H = sl.DMD_Hol(U, X, Y, 5e3, 5.2e3, 0, 1); % Applying the hologram grating
 
-% H = H'; % Transpose matrix to make it horizontal
+H = H'; % Transpose matrix to make it horizontal
 
 figure(1); imagesc(H); colormap gray; axis image off; % Plot the mask matrix
 
-% sl.Fullscreen(H, 2); % Send mask to DMD screen
+sl.Fullscreen(H, 2); % Send mask to DMD screen
 
 function y = SquareAp(N, M, len)
 % This function generates a square aperture, with sides of length 
