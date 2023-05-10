@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import cv2
 
 
-im = cv2.imread("abi/plane6.bmp", 1)
+im = cv2.imread("imagename.format", 1)
 
 # Converting to grayscale
 im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
@@ -38,6 +38,7 @@ xsize = np.shape(inten)[0] # size of x-axis for plot
 
 
 # Applying gaussian filter
+# Useful for planewave analysis (smoothes noise)
 fltr=20
 gfinten=gf(inten, fltr)
 
@@ -51,7 +52,7 @@ plt.title('Beam Intensity', fontsize = 40)
 plt.legend(fontsize=30)
 plt.show()
 
-plt.savefig('graphs/planewaveplot6hor.png')
+plt.savefig('plotname.format')
 
 # 3D representation of beam intensity
 # Beware of uncommenting! Very slow and you may freeze your computer :(
