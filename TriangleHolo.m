@@ -7,6 +7,10 @@ N = 1920; M = 1080;
 U = TriAp(N, M, 0.3);
 H = sl.DMD_Hol(U, X, Y, 5e3, 5.2e3, 0, 1);
 H = H';
+    
+U_f = fft2(U);
+Int_f = abs(fftshift(Uf));
+% Fourier transform of field U
 
 figure(1); imagesc(H); colormap gray; axis image off;
 
