@@ -21,6 +21,8 @@ sl.Fullscreen(H, 2); % Send mask to DMD screen
 function y = SquareAp(N, M, len)
 % This function generates a square aperture, with sides of length 
 % len*(smallest dimension of array), thus it is always between 0 and 1.
+% for example, if the DMD resolution (array size) is 1920x1080 pixels,
+% then len = 0.3 gives a square aperture with sides of length 1080*0.3 = 324 pixels
 % Note that matlab functions must be placed at the end of the code.
 
     mask = zeros(M,N);
