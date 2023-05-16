@@ -6,6 +6,6 @@ Note that it is not expected of you to completely understand how the custom sl c
 
 The sqare hologram code is annotated fully, however the format for generating the rest of the apertures is exactly the same.
 
-ImageData.py is useful for analysing beam properties in detail (especially for planewave analysis).
+ImageData.py is useful for analysing beam properties in detail (including analysing image cross-sections).
 
 sl.m written by Keshaan Singh (1106433@students.wits.ac.za)
