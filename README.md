@@ -10,21 +10,13 @@ ImageData.py is useful for analysing beam properties in detail (including analys
 
 sl.m written by Keshaan Singh (1106433@students.wits.ac.za)
 
-def circfraun(r,a,wl,f):
-    
-    k = 2*pi/wl
-    
-    return ( jv(1,k*r*a/f)/(k*r*a/f) )**2
 
+d = 11.9*sin(arctan(1080/1920)) ### Physical height of DMD, 
+                                ### diagonal is specified as 11.9 mm
 
-def squarefraun(X,Y,a,wl,f):
-    
-    k=2*pi/wl
-    
-    return ( sin(k*X*a/f)*sin(k*Y*a/f)/(k*X*a/f)/(k*Y*a/f) )**2
+wl = 632.8e-6
 
+f = 500
 
-squareU = squarefraun(X,Y,a,wl,f)
-
-
-circU = circfraun(R,a,wl,f)
+a = 0.3/2*d ### Acts as radius in the case of circle, and
+            ### half the legnth of each side for the square aperture
