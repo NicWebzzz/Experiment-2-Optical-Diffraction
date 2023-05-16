@@ -9,3 +9,22 @@ The sqare hologram code is annotated fully, however the format for generating th
 ImageData.py is useful for analysing beam properties in detail (including analysing image cross-sections).
 
 sl.m written by Keshaan Singh (1106433@students.wits.ac.za)
+
+def circfraun(r,a,wl,f):
+    
+    k = 2*pi/wl
+    
+    return ( jv(1,k*r*a/f)/(k*r*a/f) )**2
+
+
+def squarefraun(X,Y,a,wl,f):
+    
+    k=2*pi/wl
+    
+    return ( sin(k*X*a/f)*sin(k*Y*a/f)/(k*X*a/f)/(k*Y*a/f) )**2
+
+
+squareU = squarefraun(X,Y,a,wl,f)
+
+
+circU = circfraun(R,a,wl,f)
